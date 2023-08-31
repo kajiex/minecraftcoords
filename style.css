@@ -10,11 +10,12 @@ body {
     background-image: url(background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-height: 100vh;
 }
 
 /* Style the header */
-#h2 {
+h1 {
     text-align: center;
     padding: 20px;
     background-color: #333;
@@ -41,7 +42,7 @@ body {
     text-align: center;
 }
 
-#myButton {
+#addButton {
     padding: 10px 20px;
     height: 50px;
     background-color: #333;
@@ -54,9 +55,10 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
-#myButton:hover {
+#addButton:hover {
     transition: 0.5s;
     background-color: #555;
+    rotate: 360deg;
 }
 
 /* Style the container for coordinates */
@@ -66,7 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-    width: 550px;
+    width: 25%;
     margin: auto;
 }
 
@@ -86,7 +88,7 @@ body {
     margin: 0;
     flex-grow: 1;
     font-size: 24px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Lilita One', cursive;
     position: relative;
 }
 
@@ -108,10 +110,32 @@ body {
 .seed .fa-trash {
     margin-left: 10px;
 }
-.seed .kolor {
+.seed .color {
     display: flex;
     position: relative;
-    width: 40px;
-    height: 40px;
     margin-right: 3%; 
+}
+
+.color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 26px;
+    transform: scale(1);
+    transition: 0.2s ease-in-out;
+}
+
+.color::-webkit-color-swatch {
+    border-radius: 5px;
+    rotate: 45deg;
+    border: 2px solid #00000060;
+}
+
+.color:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
 }
